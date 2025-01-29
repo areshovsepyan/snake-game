@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="snake.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bolt top left">
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_di_64_2157)">
+            <circle
+              cx="9.23047"
+              cy="9.43109"
+              r="6.5"
+              fill="url(#paint0_radial_64_2157)" />
+          </g>
+          <path
+            d="M6.46094 11.7258L11.9995 7.13638M6.46094 7.13638L11.9995 11.7258"
+            stroke="#093430" />
+          <defs>
+            <filter
+              id="filter0_di_64_2157"
+              x="0.730469"
+              y="0.931091"
+              width="21"
+              height="21"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dx="2" dy="2" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.0359028 0 0 0 0 0.177018 0 0 0 0 0.195833 0 0 0 1 0" />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_64_2157" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_64_2157"
+                result="shape" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dy="1" />
+              <feGaussianBlur stdDeviation="1" />
+              <feComposite
+                in2="hardAlpha"
+                operator="arithmetic"
+                k2="-1"
+                k3="1" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.088125 0 0 0 0 0.391667 0 0 0 0 0.360374 0 0 0 1 0" />
+              <feBlend
+                mode="normal"
+                in2="shape"
+                result="effect2_innerShadow_64_2157" />
+            </filter>
+            <radialGradient
+              id="paint0_radial_64_2157"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(9.23047 6.43109) rotate(90) scale(9.5)">
+              <stop offset="0.151042" stop-color="#164C51" />
+              <stop offset="1" stop-color="#0D3A40" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="bolt top right">
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_di_64_2157)">
+            <circle
+              cx="9.23047"
+              cy="9.43109"
+              r="6.5"
+              fill="url(#paint0_radial_64_2157)" />
+          </g>
+          <path
+            d="M6.46094 11.7258L11.9995 7.13638M6.46094 7.13638L11.9995 11.7258"
+            stroke="#093430" />
+          <defs>
+            <filter
+              id="filter0_di_64_2157"
+              x="0.730469"
+              y="0.931091"
+              width="21"
+              height="21"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dx="2" dy="2" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.0359028 0 0 0 0 0.177018 0 0 0 0 0.195833 0 0 0 1 0" />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_64_2157" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_64_2157"
+                result="shape" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dy="1" />
+              <feGaussianBlur stdDeviation="1" />
+              <feComposite
+                in2="hardAlpha"
+                operator="arithmetic"
+                k2="-1"
+                k3="1" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.088125 0 0 0 0 0.391667 0 0 0 0 0.360374 0 0 0 1 0" />
+              <feBlend
+                mode="normal"
+                in2="shape"
+                result="effect2_innerShadow_64_2157" />
+            </filter>
+            <radialGradient
+              id="paint0_radial_64_2157"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(9.23047 6.43109) rotate(90) scale(9.5)">
+              <stop offset="0.151042" stop-color="#164C51" />
+              <stop offset="1" stop-color="#0D3A40" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="bolt bottom right">
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_di_64_2157)">
+            <circle
+              cx="9.23047"
+              cy="9.43109"
+              r="6.5"
+              fill="url(#paint0_radial_64_2157)" />
+          </g>
+          <path
+            d="M6.46094 11.7258L11.9995 7.13638M6.46094 7.13638L11.9995 11.7258"
+            stroke="#093430" />
+          <defs>
+            <filter
+              id="filter0_di_64_2157"
+              x="0.730469"
+              y="0.931091"
+              width="21"
+              height="21"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dx="2" dy="2" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.0359028 0 0 0 0 0.177018 0 0 0 0 0.195833 0 0 0 1 0" />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_64_2157" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_64_2157"
+                result="shape" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dy="1" />
+              <feGaussianBlur stdDeviation="1" />
+              <feComposite
+                in2="hardAlpha"
+                operator="arithmetic"
+                k2="-1"
+                k3="1" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.088125 0 0 0 0 0.391667 0 0 0 0 0.360374 0 0 0 1 0" />
+              <feBlend
+                mode="normal"
+                in2="shape"
+                result="effect2_innerShadow_64_2157" />
+            </filter>
+            <radialGradient
+              id="paint0_radial_64_2157"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(9.23047 6.43109) rotate(90) scale(9.5)">
+              <stop offset="0.151042" stop-color="#164C51" />
+              <stop offset="1" stop-color="#0D3A40" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="bolt bottom left">
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g filter="url(#filter0_di_64_2157)">
+            <circle
+              cx="9.23047"
+              cy="9.43109"
+              r="6.5"
+              fill="url(#paint0_radial_64_2157)" />
+          </g>
+          <path
+            d="M6.46094 11.7258L11.9995 7.13638M6.46094 7.13638L11.9995 11.7258"
+            stroke="#093430" />
+          <defs>
+            <filter
+              id="filter0_di_64_2157"
+              x="0.730469"
+              y="0.931091"
+              width="21"
+              height="21"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dx="2" dy="2" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.0359028 0 0 0 0 0.177018 0 0 0 0 0.195833 0 0 0 1 0" />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_64_2157" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_64_2157"
+                result="shape" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha" />
+              <feOffset dy="1" />
+              <feGaussianBlur stdDeviation="1" />
+              <feComposite
+                in2="hardAlpha"
+                operator="arithmetic"
+                k2="-1"
+                k3="1" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.088125 0 0 0 0 0.391667 0 0 0 0 0.360374 0 0 0 1 0" />
+              <feBlend
+                mode="normal"
+                in2="shape"
+                result="effect2_innerShadow_64_2157" />
+            </filter>
+            <radialGradient
+              id="paint0_radial_64_2157"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(9.23047 6.43109) rotate(90) scale(9.5)">
+              <stop offset="0.151042" stop-color="#164C51" />
+              <stop offset="1" stop-color="#0D3A40" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="game-board" id="game-board"></div>
+      <div class="right-container">
+        <div class="text-container">
+          <p>// use keyboard</p>
+          <p>// arrows to play</p>
+          <div class="arrow-grid">
+            <svg
+              class="arrow-up"
+              viewBox="0 0 51 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="1.46094"
+                y="1.46356"
+                width="48.0787"
+                height="27.6912"
+                rx="7.5"
+                fill="#010C15"
+                stroke="#1E2D3D" />
+              <path
+                d="M25.5 12.3091L29.75 18.3091H21.25L25.5 12.3091Z"
+                fill="white" />
+            </svg>
+            <svg
+              class="arrow-left"
+              viewBox="0 0 50 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="49.0786"
+                y="28.6547"
+                width="48.0787"
+                height="27.6912"
+                rx="7.5"
+                transform="rotate(-180 49.0786 28.6547)"
+                fill="#010C15"
+                stroke="#1E2D3D" />
+              <path
+                d="M22.0391 14.8091L28.0391 10.5591L28.0391 19.0592L22.0391 14.8091Z"
+                fill="white" />
+            </svg>
+            <svg
+              class="arrow-down"
+              viewBox="0 0 51 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="49.5391"
+                y="28.6547"
+                width="48.0787"
+                height="27.6912"
+                rx="7.5"
+                transform="rotate(-180 49.5391 28.6547)"
+                fill="#010C15"
+                stroke="#1E2D3D" />
+              <path
+                d="M25.5 17.8091L21.25 11.8091L29.75 11.8091L25.5 17.8091Z"
+                fill="white" />
+            </svg>
+            <svg
+              class="arrow-right"
+              viewBox="0 0 50 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="49"
+                y="28.6547"
+                width="48.0787"
+                height="27.6912"
+                rx="7.5"
+                transform="rotate(-180 49 28.6547)"
+                fill="#010C15"
+                stroke="#1E2D3D" />
+              <path
+                d="M27.9604 14.8091L21.9604 19.0592L21.9604 10.5591L27.9604 14.8091Z"
+                fill="white" />
+            </svg>
+          </div>
+        </div>
+        <div class="food-container">
+          <p>// food left</p>
+          <div class="food-grid">
+            <svg
+              id="food"
+              width="35"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle
+                opacity="0.1"
+                cx="10.8456"
+                cy="10.5377"
+                r="10.3456"
+                fill="#43D9AD" />
+              <circle
+                opacity="0.2"
+                cx="10.8456"
+                cy="10.5377"
+                r="7.34558"
+                fill="#43D9AD" />
+              <circle cx="10.8457" cy="10.5377" r="4" fill="#43D9AD" />
+            </svg>
+            <!-- <div class="food"></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
