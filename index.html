@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake Game</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="snake.js" type="module" defer></script>
+    <script src="game.js" type="module" defer></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <div class="bolt top left">
         <svg
           width="22"
@@ -410,29 +410,7 @@
         </div>
         <div class="food-container">
           <p>// food left</p>
-          <div class="food-grid">
-            <svg
-              id="food"
-              width="35"
-              viewBox="0 0 25 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle
-                opacity="0.1"
-                cx="10.8456"
-                cy="10.5377"
-                r="10.3456"
-                fill="#43D9AD" />
-              <circle
-                opacity="0.2"
-                cx="10.8456"
-                cy="10.5377"
-                r="7.34558"
-                fill="#43D9AD" />
-              <circle cx="10.8457" cy="10.5377" r="4" fill="#43D9AD" />
-            </svg>
-            <!-- <div class="food"></div> -->
-          </div>
+          <div id="food-board" class="food-grid"></div>
         </div>
       </div>
     </div>

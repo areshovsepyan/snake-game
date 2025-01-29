@@ -31,7 +31,7 @@ body {
   padding: 36px;
 
   height: 100vmin;
-  max-height: 550px;
+  max-height: 625px;
   width: 100vmin;
   max-width: 900px;
 
@@ -45,23 +45,58 @@ body {
 .game-board {
   background-color: rgb(1, 22, 39, 0.84);
   border-radius: 8px;
-  box-shadow: inset 1px 5px 11px rgba(2, 18, 27, 0.71);
+  box-shadow: inset 1px 5px 11px #0c1616;
 
   display: grid;
-  grid-template-rows: repeat(21, 1fr);
-  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  grid-template-columns: repeat(30, 1fr);
 }
+.win-message,
+.lost-message {
+  position: absolute;
+  bottom: 20%;
+  left: 18%;
+
+  width: 300px;
+  height: 100px;
+  border-radius: 8px;
+  border: 1px solid #0c1616;
+
+  background: rgba(1, 22, 39, 0.84);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #43d9ad;
+  font-size: 28px;
+  letter-spacing: 5px;
+}
+.win-message::before {
+  position: relative;
+  content: 'WELL DONE!';
+}
+
+.lost-message::before {
+  position: relative;
+  content: 'GAME OVER!';
+}
+
 .snake {
   background-color: #43d9ad;
 }
-/* .food {
-  display: inline-block;
-  width: 150px;
-  height: 150px;
+
+.game-board > :first-child {
+  /* border-radius: 50% 0 0 50%; */
+}
+
+.food {
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
-  background-color: #154951;
-} */
-#game-board {
+  background-color: #43d9ad;
+  box-shadow: 0 0 0 6px rgba(67, 217, 173, 0.2),
+    0 0 0 13px rgba(67, 217, 173, 0.1);
+  align-self: center;
+  justify-self: center;
 }
 
 .right-container {
@@ -113,7 +148,11 @@ body {
   padding: 16px;
 }
 .food-grid {
-  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(5, 30px);
+  grid-template-rows: repeat(2, 30px);
+  gap: 13px;
+  margin-top: 24px;
 }
 
 .bolt {
